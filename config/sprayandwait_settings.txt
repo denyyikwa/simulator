@@ -54,6 +54,16 @@ Scenario.nrofHostGroups = 6
 # Common settings for all groups
 Group.movementModel = ShortestPathMapBasedMovement
 Group.router = SprayAndWaitRouter
+
+#Penmanggilan report dengan DecisionEngine
+==========================================================
+Group.router = DecisionEngine
+DecisionEngine.decisionEngine=SprayAndWaitDecisonEngine
+
+SprayAndWaitDecisonEngine.nrofCopies=3
+SprayAndWaitDecisonEngine.binaryMode=true
+==========================================================
+
 Group.bufferSize = 5M
 Group.waitTime = 0, 120
 # All nodes have the bluetooth interface
