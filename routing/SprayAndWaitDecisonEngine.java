@@ -6,6 +6,18 @@ import core.Message;
 
 public class SprayAndWaitDecisonEngine implements RoutingDecisionEngine {
 
+/** identifier for the initial number of copies setting ({@value})*/ 
+public static final String NROF_COPIES = "nrofCopies";
+/** identifier for the binary-mode setting ({@value})*/ 
+public static final String BINARY_MODE = "binaryMode";
+/** SprayAndWait router's settings name space ({@value})*/ 
+public static final String SPRAYANDWAIT_NS = "SprayAndWaitDecisonEngine";
+/** Message property key */
+public static final String MSG_COUNT_PROPERTY = SPRAYANDWAIT_NS + "." +
+    "copies";
+
+protected int initialNrofCopies;
+protected boolean isBinary;
 
     @Override
     public void connectionUp(DTNHost thisHost, DTNHost peer) {

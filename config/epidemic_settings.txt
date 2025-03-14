@@ -1,0 +1,10 @@
+Scenario.name = Epidemic
+Group.router = EpidemicRouter
+
+Report.nrofReports = 1
+# length of the warm up period (simulated seconds)
+Report.warmup = 0
+# default directory of reports (can be overridden per Report with output setting)
+Report.reportDir = reports/epidemic
+# Report classes to load
+Report.report1 = MessageStatsReport
